@@ -1,0 +1,30 @@
+<resources>
+    <!--main activity-->
+    <string name="app_name">Bowler-Pro</string>
+    <string name="signIN_button">Sign In</string>
+    <string name="signOUT_button">Sign Out</string>
+    <string name="game_log_button">Log Game</string>
+    <string name="stats_button">Player Stats</string>
+    <string name="admin_button">Manage System</string>
+
+
+    <!--sign in-->
+    <string name="sign_in_label">Sign In / Create Account</string>
+    <string name="user_text">Username</string>
+    <string name="password">Password</string>
+    <string name="create_acct">Create Account</string>
+
+
+    <!--game log-->
+    <string name="game_log_label">Log Game</string>
+    <string name="score_text">Score</string>
+    <string name="strikes">Strikes</string>
+    <string name="spares">Spares</string>
+    <string name="open_frames">Open Frames</string>
+    <string name="submit_game">Submit Game</string>
+
+
+    <!--toasts-->
+    <string name="toast">Sign In First</string>
+
+</resources>
