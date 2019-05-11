@@ -37,6 +37,10 @@ public class UserControl {
         return true;
     }
 
+    public User getUserByName(String name) {
+        return mUserHelper.getByUsername(name);
+    }
+
     public boolean correctPassword(String username, String password) {
         if(usernameExists(username)) {
 

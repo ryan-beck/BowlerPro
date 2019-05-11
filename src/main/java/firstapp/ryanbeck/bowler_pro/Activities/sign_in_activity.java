@@ -34,36 +34,54 @@ public class sign_in_activity extends AppCompatActivity {
 
     }
 
-    private void backToMain() {
+    private void backToMain(User u) {
         MainActivity.sign_in();
         Intent intent = new Intent(sign_in_activity.this, MainActivity.class);
+        intent.putExtra("name", u.getUsername());
         startActivity(intent);
     }
 
     public void signIn(View v) {
-        //if user data is correct
 
-        //else
-            // prompt to retry
+        String name = username.getText().toString();
+        String pass = password.getText().toString();
+
+        if(!name.equals("") && !pass.equals("")) {
+            user = userControl.getUserByName(name);
+            //if user data is correct
+            if(user != null) {
+                if(user.getPassword().equals(pass)) {
+                    backToMain(user);
+                } else {
+                    Toast.makeText(this, "Incorrect password", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "Username does not exist", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+
     }
 
 
     public void create(View v) {
         String name = username.getText().toString();
         String pass = password.getText().toString();
-        // logic to check if username already exists in DB
 
-        if(userControl.usernameExists(name)) {
-            Toast.makeText(this, "User name already exists", Toast.LENGTH_SHORT).show();
-        } else {
-            if(name.equals("admin2") && pass.equals("admin2")) {
-                user = new User(UUID.randomUUID(), true, name, pass);
-            }else {
-                user = new User(UUID.randomUUID(),false, name, pass);
+        if(!name.equals("") && !pass.equals("")) {
+            // logic to check if username already exists in DB
+
+            if (userControl.usernameExists(name)) {
+                Toast.makeText(this, "Username already exists", Toast.LENGTH_SHORT).show();
+            } else {
+                if (name.equals("admin2")) {
+                    user = new User(UUID.randomUUID(), true, name, pass);
+                } else {
+                    user = new User(UUID.randomUUID(), false, name, pass);
+                }
+                userControl.addUser(user);
+                backToMain(user);
             }
-            userControl.addUser(user);
-            backToMain();
-
         }
     }
 }
