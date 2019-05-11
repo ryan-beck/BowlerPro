@@ -1,4 +1,4 @@
-package firstapp.ryanbeck.bowler_pro.Database;
+package firstapp.ryanbeck.bowler_pro.Database.User;
 
 public class User_schema {
     public static final class userTable {

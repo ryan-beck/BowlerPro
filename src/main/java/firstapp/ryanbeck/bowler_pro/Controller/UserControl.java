@@ -1,10 +1,9 @@
-package firstapp.ryanbeck.bowler_pro;
+package firstapp.ryanbeck.bowler_pro.Controller;
 
 import android.content.Context;
 
-import java.util.List;
-
-import firstapp.ryanbeck.bowler_pro.Database.UserHelper;
+import firstapp.ryanbeck.bowler_pro.Database.User.UserHelper;
+import firstapp.ryanbeck.bowler_pro.Model.User;
 
 public class UserControl {
 
@@ -41,14 +40,6 @@ public class UserControl {
         return mUserHelper.getByUsername(name);
     }
 
-    public boolean correctPassword(String username, String password) {
-        if(usernameExists(username)) {
-
-            return true;
-        }else{
-            return false;
-        }
-    }
 
 
 }

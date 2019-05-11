@@ -1,4 +1,4 @@
-package firstapp.ryanbeck.bowler_pro;
+package firstapp.ryanbeck.bowler_pro.Model;
 
 import java.util.ArrayList;
 

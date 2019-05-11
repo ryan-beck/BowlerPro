@@ -1,4 +1,4 @@
-package firstapp.ryanbeck.bowler_pro.Database;
+package firstapp.ryanbeck.bowler_pro.Database.User;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,13 +10,13 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import firstapp.ryanbeck.bowler_pro.Database.User_schema.userTable;
-import firstapp.ryanbeck.bowler_pro.User;
+import firstapp.ryanbeck.bowler_pro.Database.User.User_schema.userTable;
+import firstapp.ryanbeck.bowler_pro.Model.User;
 
 public class UserHelper extends SQLiteOpenHelper {
-    public static final String TAG = "GYM_Log";
+    public static final String TAG = "User";
 
-    public static final String DATA_BASE_NAME = "gymLog.db";
+    public static final String DATA_BASE_NAME = "user.db";
     public static final int VERSION = 1;
 
     private SQLiteDatabase db;

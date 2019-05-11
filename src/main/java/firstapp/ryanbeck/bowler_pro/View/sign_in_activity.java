@@ -1,4 +1,4 @@
-package firstapp.ryanbeck.bowler_pro.Activities;
+package firstapp.ryanbeck.bowler_pro.View;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +10,8 @@ import android.widget.Toast;
 import java.util.UUID;
 
 import firstapp.ryanbeck.bowler_pro.R;
-import firstapp.ryanbeck.bowler_pro.User;
-import firstapp.ryanbeck.bowler_pro.UserControl;
+import firstapp.ryanbeck.bowler_pro.Model.User;
+import firstapp.ryanbeck.bowler_pro.Controller.UserControl;
 
 public class sign_in_activity extends AppCompatActivity {
 

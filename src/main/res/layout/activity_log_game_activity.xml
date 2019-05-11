@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.logGame_activity">
+    tools:context=".View.logGame_activity">
 
     <TextView
         android:id="@+id/textView2"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -32,25 +32,25 @@
         tools:layout_editor_absoluteX="98dp" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/strikes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:ems="10"
         android:inputType="number"
         android:text="@string/strikes"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/score"
         tools:layout_editor_absoluteX="99dp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/spares"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="number"
         android:text="@string/spares"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/strikes"
         tools:layout_editor_absoluteX="98dp" />
 
     <Button
@@ -59,6 +59,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="@string/submit_game"
-        app:layout_constraintTop_toBottomOf="@+id/editText5"
+        app:layout_constraintTop_toBottomOf="@+id/spares"
         tools:layout_editor_absoluteX="146dp" />
 </android.support.constraint.ConstraintLayout>

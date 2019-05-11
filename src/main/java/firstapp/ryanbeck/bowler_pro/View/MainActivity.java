@@ -1,4 +1,4 @@
-package firstapp.ryanbeck.bowler_pro.Activities;
+package firstapp.ryanbeck.bowler_pro.View;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import firstapp.ryanbeck.bowler_pro.R;
-import firstapp.ryanbeck.bowler_pro.User;
-import firstapp.ryanbeck.bowler_pro.UserControl;
+import firstapp.ryanbeck.bowler_pro.Model.User;
+import firstapp.ryanbeck.bowler_pro.Controller.UserControl;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         if(isSignedIn) {
             // generate log game activity
             Intent intent = new Intent(MainActivity.this, logGame_activity.class);
+            intent.putExtra("name", user.getUsername());
             startActivity(intent);
         } else {
             Toast.makeText(this, R.string.toast, Toast.LENGTH_SHORT).show();

@@ -1,12 +1,12 @@
-package firstapp.ryanbeck.bowler_pro.Database;
+package firstapp.ryanbeck.bowler_pro.Database.User;
 
 import android.database.Cursor;
 import android.database.CursorWrapper;
 
 import java.util.UUID;
 
-import firstapp.ryanbeck.bowler_pro.User;
-import firstapp.ryanbeck.bowler_pro.Database.User_schema.userTable;
+import firstapp.ryanbeck.bowler_pro.Model.User;
+import firstapp.ryanbeck.bowler_pro.Database.User.User_schema.userTable;
 
 public class UserCursorWrapper extends CursorWrapper {
 
