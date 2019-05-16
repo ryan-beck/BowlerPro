@@ -34,7 +34,8 @@ public class GameHelper extends SQLiteOpenHelper {
                 gameTable.cols.PLAYER_UUID + "," +
                 gameTable.cols.SCORE + "," +
                 gameTable.cols.STRIKES + "," +
-                gameTable.cols.SPARES +
+                gameTable.cols.SPARES + "," +
+                gameTable.cols.DATE +
                 ")"
         );
     }
@@ -51,6 +52,7 @@ public class GameHelper extends SQLiteOpenHelper {
         CV.put(gameTable.cols.SCORE, game.getScore());
         CV.put(gameTable.cols.STRIKES, game.getStrikes());
         CV.put(gameTable.cols.SPARES, game.getStrikes());
+        CV.put(gameTable.cols.DATE, game.getDate().getTime());
 
         return CV;
     }
@@ -92,7 +94,7 @@ public class GameHelper extends SQLiteOpenHelper {
         try {
             cursor.moveToFirst();
             while(!cursor.isAfterLast()) {
-                logs.add(cursor.getUser());
+                logs.add(cursor.getGame());
                 cursor.moveToNext();
             }
         }finally {

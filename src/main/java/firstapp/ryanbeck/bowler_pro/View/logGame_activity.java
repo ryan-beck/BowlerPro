@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Date;
 import java.util.UUID;
 
 import firstapp.ryanbeck.bowler_pro.Controller.GameControl;
@@ -25,6 +26,8 @@ public class logGame_activity extends AppCompatActivity {
     GameControl gameControl;
     UserControl userControl;
 
+    Date date;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,7 @@ public class logGame_activity extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         user = userControl.getUserByName(name);
 
+        date = new Date();
 
     }
 
@@ -51,7 +55,9 @@ public class logGame_activity extends AppCompatActivity {
                              Integer.parseInt(strikes.getText().toString()),
                              Integer.parseInt(spares.getText().toString()),
                              UUID.randomUUID(),
-                             user.getId());
+                             user.getId(),
+                             date
+                        );
         gameControl.addGame(game);
 
 

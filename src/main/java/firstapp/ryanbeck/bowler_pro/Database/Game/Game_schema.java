@@ -10,6 +10,7 @@ public class Game_schema {
             public static final String SCORE = "score";
             public static final String STRIKES = "strikes";
             public static final String SPARES = "spares";
+            public static final String DATE = "date";
         }
     }
 }

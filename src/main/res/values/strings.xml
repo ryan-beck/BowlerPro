@@ -24,6 +24,13 @@
     <string name="open_frames">Open Frames</string>
     <string name="submit_game">Submit Game</string>
 
+    <!--player stats-->
+    <string name="stats_label">Player Stats</string>
+    <string name="avg">Avg. Score:</string>
+    <string name="game_date">Game Date</string>
+
+
+
 
     <!--toasts-->
     <string name="sign_in_toast">Sign In First</string>
