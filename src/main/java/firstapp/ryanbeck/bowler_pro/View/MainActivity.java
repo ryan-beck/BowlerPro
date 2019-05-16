@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static boolean isSignedIn = false;
 
-    private static User user = null;
+    private User user = null;
     UserControl userControl;
 
     static public void sign_in() {
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         userControl = UserControl.get(this.getApplicationContext());
+
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
 
@@ -67,16 +68,18 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("name", user.getUsername());
             startActivity(intent);
         } else {
-            Toast.makeText(this, R.string.toast, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.sign_in_toast, Toast.LENGTH_SHORT).show();
         }
     }
 
     public void playerStats(View v) {
         if(isSignedIn) {
             // generate activity for stats
-            Toast.makeText(this, "good", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, playerStats_activity.class);
+            intent.putExtra("name", user.getUsername());
+            startActivity(intent);
         } else {
-            Toast.makeText(this, R.string.toast, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.sign_in_toast, Toast.LENGTH_SHORT).show();
         }
     }
 

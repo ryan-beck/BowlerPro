@@ -5,6 +5,7 @@
     <string name="signOUT_button">Sign Out</string>
     <string name="game_log_button">Log Game</string>
     <string name="stats_button">Player Stats</string>
+    <string name="league">League Info</string>
     <string name="admin_button">Manage System</string>
 
 
@@ -25,6 +26,6 @@
 
 
     <!--toasts-->
-    <string name="toast">Sign In First</string>
+    <string name="sign_in_toast">Sign In First</string>
 
 </resources>

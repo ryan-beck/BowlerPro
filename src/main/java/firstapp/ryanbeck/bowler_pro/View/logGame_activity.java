@@ -31,6 +31,9 @@ public class logGame_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_game_activity);
 
+        userControl = UserControl.get(this.getApplicationContext());
+        gameControl = GameControl.get(this.getApplicationContext());
+
         score = findViewById(R.id.score);
         strikes = findViewById(R.id.strikes);
         spares = findViewById(R.id.spares);
@@ -43,7 +46,7 @@ public class logGame_activity extends AppCompatActivity {
     }
 
     public void submit(View v) {
-        //TODO: submit to data base here
+
         game = new Game(Integer.parseInt(score.getText().toString()),
                              Integer.parseInt(strikes.getText().toString()),
                              Integer.parseInt(spares.getText().toString()),
@@ -53,6 +56,7 @@ public class logGame_activity extends AppCompatActivity {
 
 
         Intent intent = new Intent(logGame_activity.this, MainActivity.class);
+        intent.putExtra("name", user.getUsername());
         startActivity(intent);
     }
 }

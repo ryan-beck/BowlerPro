@@ -1,5 +1,6 @@
 package firstapp.ryanbeck.bowler_pro.Model;
 
+import java.util.Date;
 import java.util.UUID;
 
 public class Game {
@@ -8,7 +9,10 @@ public class Game {
     private int spares;
     private UUID id;
     private UUID playerId;
+    private Date date;
 
+
+    //TODO: Add date field to schema and everything
     public Game(int score, int strikes, int spares, UUID id, UUID playerId) {
         this.score = score;
         this.strikes = strikes;
@@ -55,5 +59,10 @@ public class Game {
 
     public void setPlayerId(UUID playerId) {
         this.playerId = playerId;
+    }
+
+    @Override
+    public String toString() {
+        return date.toString() + "  " + score + "  " + strikes + "  " + spares;
     }
 }

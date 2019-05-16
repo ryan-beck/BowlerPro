@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import firstapp.ryanbeck.bowler_pro.Database.Game.Game_schema.gameTable;
 import firstapp.ryanbeck.bowler_pro.Model.Game;
 
@@ -81,21 +84,21 @@ public class GameHelper extends SQLiteOpenHelper {
     }
 
 
-//    public List<User> getUsers() {
-//        UserCursorWrapper cursor = new UserCursorWrapper(queryDataBase(userTable.NAME, null, null));
-//
-//        List<User> logs = new ArrayList<>();
-//
-//        try {
-//            cursor.moveToFirst();
-//            while(!cursor.isAfterLast()) {
-//                logs.add(cursor.getUser());
-//                cursor.moveToNext();
-//            }
-//        }finally {
-//            cursor.close();
-//        }
-//
-//        return logs;
-//    }
+    public List<Game> getGames() {
+        GameCursorWrapper cursor = new GameCursorWrapper(queryDataBase(gameTable.NAME, null, null));
+
+        List<Game> logs = new ArrayList<>();
+
+        try {
+            cursor.moveToFirst();
+            while(!cursor.isAfterLast()) {
+                logs.add(cursor.getUser());
+                cursor.moveToNext();
+            }
+        }finally {
+            cursor.close();
+        }
+
+        return logs;
+    }
 }
