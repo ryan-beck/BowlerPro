@@ -34,6 +34,10 @@
     <string name="remove_group">Remove Group</string>
     <string name="game_logs">View Game Logs</string>
     <string name="create_group">Create Group</string>
+    <string name="home_button">Return Home</string>
+
+    <!--league-->
+    <string name="join_group">Join Group</string>
 
     <!--toasts-->
     <string name="sign_in_toast">Sign In First</string>

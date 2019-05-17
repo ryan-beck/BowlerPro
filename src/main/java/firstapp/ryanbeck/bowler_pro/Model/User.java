@@ -3,13 +3,14 @@ package firstapp.ryanbeck.bowler_pro.Model;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class User {
+public class User implements Comparable< User >{
 
     private UUID id;
     private boolean admin;
     private String username;
     private String password;
     private String groupName;
+    private Double average;
 
 //    public User(boolean admin, String username, String password) {
 //        id = UUID.randomUUID();
@@ -24,6 +25,14 @@ public class User {
         this.username = username;
         this.password = password;
         this.groupName = groupName;
+    }
+
+    public void setAverage(double average) {
+        this.average = average;
+    }
+
+    public Double getAverage() {
+        return average;
     }
 
     public void setGroupName(String groupName) {
@@ -48,6 +57,11 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public int compareTo(User o) {
+        return this.getAverage().compareTo(o.getAverage());
     }
 
 }

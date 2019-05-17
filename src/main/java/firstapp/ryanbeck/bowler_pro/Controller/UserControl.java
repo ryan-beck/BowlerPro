@@ -46,5 +46,9 @@ public class UserControl {
         return mUserHelper.getUsers();
     }
 
+    public void delete(String name) {
+        mUserHelper.deleteUser(name);
+    }
+
 
 }

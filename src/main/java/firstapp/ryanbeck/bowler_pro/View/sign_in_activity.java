@@ -53,10 +53,10 @@ public class sign_in_activity extends AppCompatActivity {
                 if(user.getPassword().equals(pass)) {
                     backToMain(user);
                 } else {
-                    Toast.makeText(this, "Incorrect password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Incorrect password", Toast.LENGTH_LONG).show();
                 }
             } else {
-                Toast.makeText(this, "Username does not exist", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Username does not exist", Toast.LENGTH_LONG).show();
             }
         }
 
@@ -68,20 +68,18 @@ public class sign_in_activity extends AppCompatActivity {
         String name = username.getText().toString();
         String pass = password.getText().toString();
 
-        if(!name.equals("") && !pass.equals("")) {
+        if(!name.equals("") && pass.length() >= 6) {
             // logic to check if username already exists in DB
 
             if (userControl.usernameExists(name)) {
-                Toast.makeText(this, "Username already exists", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Username already exists", Toast.LENGTH_LONG).show();
             } else {
-                if (name.equals("admin2")) {
-                    user = new User(UUID.randomUUID(), true, name, pass, "none");
-                } else {
-                    user = new User(UUID.randomUUID(), false, name, pass, "none");
-                }
+                user = new User(UUID.randomUUID(), false, name, pass, "none");
                 userControl.addUser(user);
                 backToMain(user);
             }
+        } else {
+            Toast.makeText(this, "Invalid username or password\nPasswords must be at least 6 characters", Toast.LENGTH_LONG).show();
         }
     }
 }

@@ -44,6 +44,21 @@ public class UserHelper extends SQLiteOpenHelper {
 
     }
 
+    public void joinGroup(String name) {
+
+    }
+
+    public boolean deleteUser(String name) {
+        db = this.getWritableDatabase();
+        boolean success =  db.delete(userTable.NAME, userTable.cols.USERNAME + "=?", new String[]{name}) > 0;
+        if(success) {
+            Log.d("deleting", "success");
+        } else {
+            Log.d("deleting", "fail");
+        }
+        return success;
+    }
+
     private ContentValues getContentValues(User user) {
         ContentValues CV = new ContentValues();
         CV.put(userTable.cols.UUID, user.getId().toString());

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.removeGroup_activity"></activity>
+        <activity android:name=".View.joinGroup_activity"></activity>
+        <activity android:name=".View.groupInfo_activity" />
+        <activity android:name=".View.removeGroup_activity" />
         <activity android:name=".View.addGroup_activity" />
         <activity android:name=".View.view_game_log_activity" />
         <activity android:name=".View.admin_activity" />

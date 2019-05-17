@@ -26,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
+        android:hint="@string/score_text"
         android:inputType="number"
-        android:text="@string/score_text"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:layout_editor_absoluteX="98dp" />
 
@@ -37,8 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:ems="10"
+        android:hint="@string/strikes"
         android:inputType="number"
-        android:text="@string/strikes"
         app:layout_constraintTop_toBottomOf="@+id/score"
         tools:layout_editor_absoluteX="99dp" />
 
@@ -48,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:ems="10"
+        android:hint="@string/spares"
         android:inputType="number"
-        android:text="@string/spares"
         app:layout_constraintTop_toBottomOf="@+id/strikes"
         tools:layout_editor_absoluteX="98dp" />
 

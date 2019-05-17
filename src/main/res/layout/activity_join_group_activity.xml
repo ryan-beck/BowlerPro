@@ -22,23 +22,20 @@
         app:layout_constraintVertical_bias="0.688">
 
         <ListView
-            android:id="@+id/groups_list"
+            android:id="@+id/groupsJoin_list"
             android:layout_width="match_parent"
             android:layout_height="588dp"></ListView>
     </LinearLayout>
 
     <EditText
-        android:id="@+id/removeGroupText"
+        android:id="@+id/joinGroupText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="72dp"
-        android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="Group to Remove"
+        android:hint="Group to Join"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/joinButton"
-        app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,11 +43,14 @@
         android:id="@+id/joinButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
         android:layout_marginTop="72dp"
-        android:layout_marginEnd="16dp"
-        android:onClick="remove"
-        android:text="@string/remove_group"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="118dp"
+        android:text="@string/join_group"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/joinGroupText"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

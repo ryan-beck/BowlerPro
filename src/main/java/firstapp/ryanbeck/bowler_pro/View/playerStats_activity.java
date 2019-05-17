@@ -80,7 +80,7 @@ public class playerStats_activity extends AppCompatActivity {
 
     // TODO: Create delete game functionality
 
-    private double avgPlayerScore(List<Game> games) {
+    public static double avgPlayerScore(List<Game> games) {
         double total = 0.0;
         for(Game game : games) {
             total += game.getScore();
