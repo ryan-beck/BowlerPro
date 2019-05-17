@@ -75,9 +75,9 @@ public class sign_in_activity extends AppCompatActivity {
                 Toast.makeText(this, "Username already exists", Toast.LENGTH_SHORT).show();
             } else {
                 if (name.equals("admin2")) {
-                    user = new User(UUID.randomUUID(), true, name, pass);
+                    user = new User(UUID.randomUUID(), true, name, pass, "none");
                 } else {
-                    user = new User(UUID.randomUUID(), false, name, pass);
+                    user = new User(UUID.randomUUID(), false, name, pass, "none");
                 }
                 userControl.addUser(user);
                 backToMain(user);

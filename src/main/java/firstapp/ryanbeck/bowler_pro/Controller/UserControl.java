@@ -2,6 +2,8 @@ package firstapp.ryanbeck.bowler_pro.Controller;
 
 import android.content.Context;
 
+import java.util.List;
+
 import firstapp.ryanbeck.bowler_pro.Database.User.UserHelper;
 import firstapp.ryanbeck.bowler_pro.Model.User;
 
@@ -40,6 +42,9 @@ public class UserControl {
         return mUserHelper.getByUsername(name);
     }
 
+    public List<User> getAllUsers() {
+        return mUserHelper.getUsers();
+    }
 
 
 }

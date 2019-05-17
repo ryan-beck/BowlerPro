@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.UUID;
 
@@ -39,10 +40,15 @@ public class addGroup_activity extends AppCompatActivity {
 
     public void createGroup(View v) {
         String text = groupName.getText().toString();
-        League newLeague = new League(text, UUID.randomUUID());
-        leagueControl.addLeague(newLeague);
-        Intent intent = new Intent(addGroup_activity.this, admin_activity.class);
-        intent.putExtra("name", user.getUsername());
-        startActivity(intent);
+        if(!text.equals("none")) {
+            League newLeague = new League(text, UUID.randomUUID());
+            leagueControl.addLeague(newLeague);
+            Intent intent = new Intent(addGroup_activity.this, admin_activity.class);
+            intent.putExtra("name", user.getUsername());
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Invalid group name", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

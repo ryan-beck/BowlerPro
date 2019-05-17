@@ -33,7 +33,8 @@ public class UserHelper extends SQLiteOpenHelper {
                 userTable.cols.UUID + "," +
                 userTable.cols.ADMIN + "," +
                 userTable.cols.USERNAME + "," +
-                userTable.cols.PASSWORD +
+                userTable.cols.PASSWORD + "," +
+                userTable.cols.LEAGUE_NAME +
                 ")"
         );
     }
@@ -49,7 +50,7 @@ public class UserHelper extends SQLiteOpenHelper {
         CV.put(userTable.cols.ADMIN, Boolean.toString(user.isAdmin()));
         CV.put(userTable.cols.USERNAME, user.getUsername());
         CV.put(userTable.cols.PASSWORD, user.getPassword());
-
+        CV.put(userTable.cols.LEAGUE_NAME, user.getGroupName());
         return CV;
     }
 

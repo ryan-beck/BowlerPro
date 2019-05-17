@@ -9,6 +9,7 @@ public class User_schema {
             public static final String ADMIN = "admin";
             public static final String USERNAME = "username";
             public static final String PASSWORD = "password";
+            public static final String LEAGUE_NAME = "leagueuuid";
         }
     }
 }

@@ -19,8 +19,8 @@ public class UserCursorWrapper extends CursorWrapper {
         Boolean admin = Boolean.parseBoolean(getString(getColumnIndex(userTable.cols.ADMIN)));
         String username = getString(getColumnIndex(userTable.cols.USERNAME));
         String password = getString(getColumnIndex(userTable.cols.PASSWORD));
-
-        User user = new User(UUID.fromString(uuidString), admin, username, password);
+        String group = getString(getColumnIndex(userTable.cols.LEAGUE_NAME));
+        User user = new User(UUID.fromString(uuidString), admin, username, password, group);
 
         return user;
     }

@@ -2,6 +2,8 @@ package firstapp.ryanbeck.bowler_pro.Controller;
 
 import android.content.Context;
 
+import java.util.List;
+
 import firstapp.ryanbeck.bowler_pro.Database.League.LeagueHelper;
 import firstapp.ryanbeck.bowler_pro.Model.League;
 
@@ -24,5 +26,13 @@ public class LeagueControl {
 
     public long addLeague(League league) {
         return mLeagueHelper.addLongItem(league);
+    }
+
+    public List<League> getAllLeagues() {
+        return mLeagueHelper.getLeagues();
+    }
+
+    public void delete(String name) {
+        mLeagueHelper.deleteGroup(name);
     }
 }

@@ -35,6 +35,11 @@ public class admin_activity extends AppCompatActivity {
     }
 
     //TODO: remove group
+    public void removeGroup(View v) {
+        Intent intent = new Intent(admin_activity.this, removeGroup_activity.class);
+        intent.putExtra("name", user.getUsername());
+        startActivity(intent);
+    }
 
     public void gameLogs(View v) {
         Intent intent = new Intent(admin_activity.this, view_game_log_activity.class);
