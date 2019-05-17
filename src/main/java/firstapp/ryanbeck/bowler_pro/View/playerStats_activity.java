@@ -14,6 +14,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import firstapp.ryanbeck.bowler_pro.Controller.GameControl;
@@ -67,6 +68,7 @@ public class playerStats_activity extends AppCompatActivity {
             Log.d("empty", "db was not empty");
 
             List<String> arr = new ArrayList<>();
+            Collections.reverse(games);
             for(Game game : games) {
                 arr.add(game.toString());
                 avg.setText(Double.toString(avgPlayerScore(games)));
@@ -78,6 +80,8 @@ public class playerStats_activity extends AppCompatActivity {
         }
 
     }
+
+    // TODO: Create delete game functionality
 
     private double avgPlayerScore(List<Game> games) {
         double total = 0.0;

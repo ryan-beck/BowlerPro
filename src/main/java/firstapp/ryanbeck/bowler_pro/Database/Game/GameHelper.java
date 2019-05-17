@@ -14,9 +14,9 @@ import firstapp.ryanbeck.bowler_pro.Database.Game.Game_schema.gameTable;
 import firstapp.ryanbeck.bowler_pro.Model.Game;
 
 public class GameHelper extends SQLiteOpenHelper {
-    public static final String TAG = "GYM_Log";
+    public static final String TAG = "game";
 
-    public static final String DATA_BASE_NAME = "gymLog.db";
+    public static final String DATA_BASE_NAME = "game.db";
     public static final int VERSION = 1;
 
     private SQLiteDatabase db;

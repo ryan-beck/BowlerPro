@@ -15,7 +15,6 @@ public class Game {
     private SimpleDateFormat sf= new SimpleDateFormat("dd-MM-yyyy");
 
 
-    //TODO: Add date field to schema and everything
     public Game(int score, int strikes, int spares, UUID id, UUID playerId, Date date) {
         this.score = score;
         this.strikes = strikes;

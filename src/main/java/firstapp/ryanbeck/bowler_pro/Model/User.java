@@ -9,7 +9,6 @@ public class User {
     private boolean admin;
     private String username;
     private String password;
-    private ArrayList<Game> games;
 
 //    public User(boolean admin, String username, String password) {
 //        id = UUID.randomUUID();
@@ -41,7 +40,4 @@ public class User {
         return password;
     }
 
-    public void addGame(Game game) {
-        games.add(game);
-    }
 }

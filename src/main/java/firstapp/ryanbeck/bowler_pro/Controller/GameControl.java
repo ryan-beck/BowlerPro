@@ -43,4 +43,8 @@ public class GameControl {
         }
         return res;
     }
+
+    public List<Game> getAllGames() {
+        return mGameHelper.getGames();
+    }
 }

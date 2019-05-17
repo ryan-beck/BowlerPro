@@ -29,8 +29,11 @@
     <string name="avg">Avg. Score:</string>
     <string name="game_date">Game Date</string>
 
-
-
+    <!--admin-->
+    <string name="add_group">Add Group</string>
+    <string name="remove_group">Remove Group</string>
+    <string name="game_logs">View Game Logs</string>
+    <string name="create_group">Create Group</string>
 
     <!--toasts-->
     <string name="sign_in_toast">Sign In First</string>

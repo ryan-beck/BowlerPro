@@ -20,8 +20,7 @@ public class GameCursorWrapper extends CursorWrapper {
         int score = getInt(getColumnIndex(gameTable.cols.SCORE));
         int strikes = getInt(getColumnIndex(gameTable.cols.STRIKES));
         int spares = getInt(getColumnIndex(gameTable.cols.SPARES));
-        int test = getInt(getColumnIndex(gameTable.cols.DATE));
-        Date date = new Date(getInt(getColumnIndex(gameTable.cols.DATE)));
+        Date date = new Date(getLong(getColumnIndex(gameTable.cols.DATE)));
 
 
         Game game = new Game(score, strikes, spares, UUID.fromString(uuidString), UUID.fromString(playerUUID), date);

@@ -83,6 +83,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void manage(View v) {
+        if(isSignedIn && user.isAdmin()) {
+            Intent intent = new Intent(MainActivity.this, admin_activity.class);
+            intent.putExtra("name", user.getUsername());
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "No admin access", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
     public void setUser(User user) {
         this.user = user;
     }
