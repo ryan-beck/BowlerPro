@@ -76,8 +76,8 @@ public class joinGroup_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String text = groupName.getText().toString();
-                for(League l : leagueControl.getAllLeagues()) {
-                    if(text.equals(l.getName())) {
+                for (League l : leagueControl.getAllLeagues()) {
+                    if (text.equals(l.getName())) {
                         user.setGroupName(l.getName());
                         userControl.delete(user.getUsername());
                         User replacement = new User(user.getId(), user.isAdmin(), user.getUsername(), user.getPassword(), l.getName());
@@ -87,7 +87,6 @@ public class joinGroup_activity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 }
-
 
 
             }

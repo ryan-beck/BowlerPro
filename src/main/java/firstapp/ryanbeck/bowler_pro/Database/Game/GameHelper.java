@@ -51,7 +51,7 @@ public class GameHelper extends SQLiteOpenHelper {
         CV.put(gameTable.cols.PLAYER_UUID, game.getPlayerId().toString());
         CV.put(gameTable.cols.SCORE, game.getScore());
         CV.put(gameTable.cols.STRIKES, game.getStrikes());
-        CV.put(gameTable.cols.SPARES, game.getStrikes());
+        CV.put(gameTable.cols.SPARES, game.getSpares());
         CV.put(gameTable.cols.DATE, game.getDate().getTime());
 
         return CV;

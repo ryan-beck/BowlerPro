@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Date;
 import java.util.UUID;
@@ -51,18 +52,28 @@ public class logGame_activity extends AppCompatActivity {
 
     public void submit(View v) {
 
-        game = new Game(Integer.parseInt(score.getText().toString()),
-                             Integer.parseInt(strikes.getText().toString()),
-                             Integer.parseInt(spares.getText().toString()),
-                             UUID.randomUUID(),
-                             user.getId(),
-                             date
-                        );
-        gameControl.addGame(game);
+        String scoreText = score.getText().toString();
+        String strikesText = strikes.getText().toString();
+        String sparesText = spares.getText().toString();
+
+        if(scoreText.length() != 0 && strikesText.length() != 0 && sparesText.length() != 0) {
+            game = new Game(Integer.parseInt(scoreText),
+                    Integer.parseInt(strikesText),
+                    Integer.parseInt(sparesText),
+                    UUID.randomUUID(),
+                    user.getId(),
+                    date
+            );
+            gameControl.addGame(game);
 
 
-        Intent intent = new Intent(logGame_activity.this, MainActivity.class);
-        intent.putExtra("name", user.getUsername());
-        startActivity(intent);
+            Intent intent = new Intent(logGame_activity.this, MainActivity.class);
+            intent.putExtra("name", user.getUsername());
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Enter all fields", Toast.LENGTH_LONG).show();
+        }
+
+
     }
 }
